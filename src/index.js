@@ -4,10 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import Footer from './Components/Footer';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+
+import Header from './Components/Header';
+import MobileManue from './Components/MobileManue';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
+     <Header/>
     <App />
+    <Footer/>
+    </Provider>
   </React.StrictMode>
 );
 
