@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 
+
 import Navbar from "./Navbar";
 import MobileManue from "./MobileManue";
 
@@ -11,8 +12,7 @@ import { VscChromeClose } from "react-icons/vsc";
 function Header() {
   const [mobileManue, setMobileManue] = useState(false);
   
-  
-
+  // setMobileManue(dispatch(mobileManueTrue()));
   return (
     <header
       className={`w-full h-[50px] md:h-[80px] bg-white flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 gap-6`}
@@ -29,12 +29,12 @@ function Header() {
             {mobileManue ? (
               <VscChromeClose
                 className="text-[16px]"
-                onClick={() => setMobileManue(false)}
+                onClick={()=> setMobileManue(false)}
               />
             ) : (
               <BiMenuAltRight
                 className="text-[24px]"
-                onClick={() => setMobileManue(true)}
+                onClick={()=>setMobileManue(true)}
               />
             )}
           </div>

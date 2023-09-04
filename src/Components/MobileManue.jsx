@@ -8,6 +8,8 @@ import {
 
 function MobileManue() {
   const dispatch = useDispatch();
+
+
     return (
    
       <ul className="md:hidden flex flex-col font-bold  absolute top-[50px] left-0 w-full h-[calc(100vh-50px)] bg-white border-t  text-black">
@@ -15,13 +17,13 @@ function MobileManue() {
             <ul className="flex flex-col justify-around items-center gap-3 text-[20px] font-semibold">
               <button
                 className="rounded-full hover:bg-gray-500 py-2 px-3 cursor-pointer"
-                onClick={() => dispatch(selectCategories('All'))}
+                onClick={()=> dispatch(selectCategories('All'))}
               >
                 All
               </button>
               <button
                 className="rounded-full hover:bg-gray-500 py-2 px-3 cursor-pointer"
-                onClick={() => dispatch(selectCategories("Photo"))}
+                onClick={()=>dispatch(selectCategories('Photo'))}
               >
                 Photo
               </button>
